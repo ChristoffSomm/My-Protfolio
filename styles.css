@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", sans-serif;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: lighter;
+    font-style: normal;
+    text-align: center;
+}
+
+.top-bar {
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.name-center {
+    font-size: 60px;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1002;
+    transition: 0.5s;
+}
+
+body {
+    padding-top: 60px;
+}
+
+/* Side Navigation */
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    background-color: #575757;
+}
+
+.side-nav .close-btn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+}
+#project4, #project3, #project2, #project1 {
+    scroll-margin-top: 175px; /* Adjust this value to match the height of your fixed top bar */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative; /* Change to relative for side nav */
+    background-color: #181818;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown content on hover */
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Container for centering content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 0;
+}
+
+/* Video Grid Styles */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.video-item {
+    background-color: #181818;
+    padding: 5px; /* Reduced padding */
+    transition: transform 0.3s ease;
+    text-align: center;
+    color: white;
+    position: relative; /* Make it a positioned element */
+    overflow: hidden; /* Prevent overflow of child elements */
+    height: 200px; /* Fixed height for uniformity, adjust as needed */
+}
+
+.video-item img {
+    width: 100%;
+    height: 100%; /* Ensure image fills the video item */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+}
+
+.video-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: white; /* Text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: flex-start; /* Align items to the left */
+    opacity: 0; /* Hide overlay initially */
+    transition: opacity 0.3s ease; /* Smooth transition for overlay */
+    padding: 10px; /* Adjust padding for overlay */
+    box-sizing: border-box; /* Ensure padding is included in total width/height */
+    font-family: "Montserrat", sans-serif; /* Set Montserrat as the font for the overlay */
+}
+
+.video-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.overlay h2 {
+    font-size: 18px; /* Adjusted font size */
+    font-weight: bold; /* Make the font bold */
+    font-style: normal;
+    margin-bottom: 5px; /* Reduced margin to 5px */
+    text-align: left; /* Align the title to the left */
+    border-bottom: 2px solid red; /* Add red underline, increased thickness */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.overlay p {
+    margin-top: 5px; /* Reduce the top margin to decrease gap */
+    margin-bottom: 15px; /* Adjust bottom margin if needed */
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px; /* Adjusted font size for paragraph */
+    text-align: left; /* Align text to the left */
+}
+
+
+.overlay a {
+    color: red; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Reduce padding for smaller button */
+    background-color: #222222; /* Background color for button */
+    border-radius: 5px; /* Rounded corners for the button */
+    align-self: flex-end; /* Align the button to the bottom right */
+}
+
+.overlay a:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+}
+
+.header {
+    text-align: right; /* Align the text to the right */
+    color: white; /* Set the text color to white */
+    margin: 20px 20px 0; /* Add margin for spacing (top, right, bottom, left) */
+    font-size: 24px; /* Adjust font size if needed */
+    font-family: "Montserrat", sans-serif; /* Use the Montserrat font */
+}
+
+.about-me h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Optional: add some space below the heading */
+}
+
+.about-me p {
+    font-size: 16px; /* Adjust the font size as needed */
+    line-height: 1.5; /* Optional: increase line height for better readability */
+}
+
+.about-me {
+    color: white; /* Set text color to white */
+    font-family: "Montserrat", sans-serif; /* Use Montserrat font */
+    padding: 20px; /* Optional: Add some padding around the section */
+}
+
+.about-me-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between the image and text */
+}
+
+.about-me-photo {
+    width: 250px; /* Increased width of the photo */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.about-me-text {
+    flex: 1; /* Allow text to take remaining space */
+}
+
+.contact-me {
+    color: white; /* Text color */
+    font-family: "Montserrat", sans-serif; /* Font style */
+    padding: 40px; /* Padding around the section */
+    text-align: center;
+}
+
+.contact-me h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center; /* Center form on the page */
+}
+
+.contact-form {
+    max-width: 500px; /* Form width */
+    width: 100%;
+    background-color: #181818; /* Dark background for the form */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between fields */
+    text-align: left; /* Align labels and inputs */
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #2a2a2a; /* Dark input background */
+    color: white; /* Input text color */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888; /* Placeholder text color */
+}
+
+button[type="submit"] {
+    background-color: #1e90ff; /* Button background */
+    color: white; /* Button text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0073e6; /* Darker button on hover */
+}
+
+.contact-section a {
+    color: #ff6f61; /* Light red color */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.contact-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer {
+    background-color: #181818; /* Dark background color */
+    color: white; /* Text color */
+    padding: 20px; /* Padding for the footer */
+    text-align: center; /* Center the text */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Position at the bottom */
+    width: auto; /* Full width */
+}
+
+.footer-content {
+    max-width: 1200px; /* Max width to match your container */
+    margin: 0 auto; /* Center align the content */
+}
+
+.footer .social-links {
+    margin-top: 10px; /* Spacing above the social links */
+}
+
+.footer .social-links a {
+    color: #ff6f61; /* Light red color for links */
+    margin: 0 10px; /* Spacing between social links */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer .social-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.warning-bar {
+    background-color: #ffcc00; /* Light yellow background */
+    color: black; /* Text color */
+	font-family: "Montserrat", sans-serif; /* Font style */
+    padding: 20px; /* Padding for the warning bar */
+    text-align: center; /* Center align the text */
+    font-weight: bold; /* Make the text bold */
+    margin-bottom: 10px; /* Space below the warning bar */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .about-me-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center-align items */
+    }
+
+    .about-me-photo {
+        width: 100%; /* Make photo take full width */
+        max-width: 400px; /* Optional: Set a max width for larger screens */
+        margin-bottom: 20px; /* Space below the photo */
+    }
+
+    h2 {
+        text-align: center; /* Center the heading */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .name-center {
+        font-size: 40px;
+    }
+
+    .menu-icon {
+        font-size: 24px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .name-center {
+        font-size: 30px;
+    }
+
+    .menu-icon {
+        font-size: 20px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
